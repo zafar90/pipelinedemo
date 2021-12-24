@@ -9,7 +9,7 @@ pipeline {
  
         choice(name: 'BRANCH', choices: ['Master', 'Dev'], description: 'Choose branch')
  
-        password(name: 'SONAR_SERVER_PWD', description: 'Enter SONAR password')
+        password(name: 'SONAR_SERVER_PWD', description: 'Enter App password')
     }
     stages {
         stage('Printing Parameters') {
@@ -22,7 +22,7 @@ pipeline {
  
                 echo "Branch Choice: ${params.BRANCH}"
  
-                echo "SONAR Password: ${params.SONAR_SERVER_PWD}"
+                echo "APP Password: ${params.SONAR_SERVER_PWD}"
             }
         }
     }
