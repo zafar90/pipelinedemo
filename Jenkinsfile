@@ -4,9 +4,8 @@ pipeline {
         string(name: 'NAME', description: 'Please tell me your name?')
         string(name: 'Address', description: 'Enter your address')
         text(name: 'DESC', description: 'Describe about the job details')
-        booleanParam(name: 'SKIP_TEST', description: 'Want to skip running Test cases?')
-        choice(name: 'BRANCH', choices: ['Master', 'Dev', 'Test', 'Stage'], description: 'Choose branch')
-        password(name: 'SONAR_SERVER_PWD', description: 'Enter App password')
+        choice(name: 'BRANCH', choices: ['Dev', 'Test', 'Stage'], description: 'Choose one environment')
+        
     }
     stages {
         stage('Printing Parameters') {
